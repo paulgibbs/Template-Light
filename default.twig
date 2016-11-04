@@ -39,9 +39,9 @@
 
                         <ul class="nav nav-pills nav-stacked">
                             {% for itemId, item in menu.items %}
-                                {% if item is iterable %}
-                                    {% for subItemId, subItem in item %}
-                                        <li class="{{ subItemId == currentMenu ? 'active' }}">
+                                {% if item.items is defined %}
+                                    {% for subItemId, subItem in item.items %}
+                                        <li class="sub {{ subItemId == currentMenu ? 'active' }}">
                                             <a href="{{ subItem.absoluteUrl|default(baseUrl ~ '/' ~ subItem.relativeUrl) }}">
                                                 {{ subItem.text|raw }}
                                             </a>
