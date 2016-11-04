@@ -39,6 +39,12 @@
 
                         <ul class="nav nav-pills nav-stacked">
                             {% for itemId, item in menu.items %}
+                                <li class="{{ itemId == currentMenu ? 'active' }}">
+                                    <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                        {{ item.text|raw }}
+                                    </a>
+                                </li>
+
                                 {% if item.items is defined %}
                                     {% for subItemId, subItem in item.items %}
                                         <li class="sub {{ subItemId == currentMenu ? 'active' }}">
@@ -47,12 +53,6 @@
                                             </a>
                                         </li>
                                     {% endfor %}
-                                {% else %}
-                                    <li class="{{ itemId == currentMenu ? 'active' }}">
-                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
-                                            {{ item.text|raw }}
-                                        </a>
-                                    </li>
                                 {% endif %}
                             {% endfor %}
                         </ul>
