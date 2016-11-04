@@ -58,6 +58,12 @@
                                 {% if item.items is defined and (itemId == currentMenu or currentMenu in item.items|keys) %}
 
                                     <ul class="nav nav-tabs">
+                                        <li class="{{ itemId == currentMenu ? 'active' }}">
+                                            <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                                {{ item.text|raw }}
+                                            </a>
+                                        </li>
+
                                         {% for subItemId, subItem in item.items %}
                                             <li class="{{ subItemId == currentMenu ? 'active' }}">
                                                 <a href="{{ subItem.absoluteUrl|default(baseUrl ~ '/' ~ subItem.relativeUrl) }}">
