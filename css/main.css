@@ -13,11 +13,7 @@ body {
 }
 
 main {
-    margin-top: 90px;
-}
-
-section {
-    margin-bottom: 120px;
+    margin-top: 15px;
 }
 
 footer {
@@ -29,19 +25,10 @@ footer {
     font-size: 15px;
     text-align: center;
     text-transform: uppercase;
-    opacity: 0.6;
-    transition: opacity .2s ease;
-}
-footer:hover {
     opacity: 1.0;
-    transition: opacity .2s ease;
 }
 footer p {
     margin: 0;
-}
-
-h3 {
-    font-size: 23px;
 }
 
 li {
@@ -56,9 +43,6 @@ li {
     border-radius: 4px;
 }
 
-header.navbar {
-    opacity: 0.9;
-}
 .navbar .navbar-brand {
     font-size: 28px;
     height: auto;
@@ -102,4 +86,28 @@ pre {
 }
 pre code {
     border: none;
+}
+
+h1, .h1 {
+    font-size: 45px;
+}
+
+h2, .h2 {
+    font-size: 34px;
+}
+
+h3, .h3 {
+    font-size: 24px;
+}
+
+h4, .h4 {
+    font-size: 20px;
+}
+
+h5, .h5 {
+    font-size: 14px;
+}
+
+h6, .h6 {
+    font-size: 14px;
 }
