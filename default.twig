@@ -52,10 +52,10 @@
                 {% endif %}
 
                 <section id="content" class="{{ menu ? 'col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10' : 'col-sm-12' }}">
-                    <nav id="topbar" role="navigation">
-                        {% if menu is defined %}
-                            {% for itemId, item in menu.items %}
-                                {% if item.items is defined and (itemId == currentMenu or currentMenu in item.items|keys) %}
+                    {% if menu is defined %}
+                        {% for itemId, item in menu.items %}
+                            {% if item.items is defined and (itemId == currentMenu or currentMenu in item.items|keys) %}
+                                <nav id="topbar" role="navigation">
 
                                     <ul class="nav nav-tabs">
                                         <li class="{{ itemId == currentMenu ? 'active' }}">
@@ -72,11 +72,10 @@
                                             </li>
                                         {% endfor %}
                                     </ul>
-
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                    </nav>
+                                </nav>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
 
                     {{ content|raw }}
                 </section>
