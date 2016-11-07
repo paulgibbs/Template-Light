@@ -17,15 +17,13 @@ main {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     background-color: #f5f5f5;
     padding: 25px 0;
     font-size: 15px;
     text-align: center;
     text-transform: uppercase;
-    opacity: 1.0;
+    margin-top: 15px;
 }
 footer p {
     margin: 0;
@@ -81,7 +79,6 @@ li {
 pre {
     padding: 0;
     border-radius: 4px;
-    margin: 15px;
     font-size: 15px;
 }
 pre code {
