@@ -86,7 +86,7 @@
         <footer>
             <div class="{{ menu ? 'container-fluid' : 'container' }}">
                 <p class="text-muted">
-                    {{ footerTitle|default('website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>') }}
+                    {{ footerTitle|raw }}
                 </p>
             </div>
         </footer>
