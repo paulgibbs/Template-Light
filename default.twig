@@ -40,17 +40,17 @@
                 {% if menu is defined %}
 
                     <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
-
-                        <ul class="nav nav-pills nav-stacked">
-                            {% for itemId, item in menu.items %}
-                                <li class="{{ (itemId == currentMenu or item.items is defined and currentMenu in item.items|keys) ? 'active' }}">
-                                    <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
-                                        {{ item.text|raw }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-
+                        <div class="sidebar-nav">
+                            <ul class="nav nav-pills nav-stacked">
+                                {% for itemId, item in menu.items %}
+                                    <li class="{{ (itemId == currentMenu or item.items is defined and currentMenu in item.items|keys) ? 'active' }}">
+                                        <a href="{{ item.absoluteUrl|default(baseUrl ~ '/' ~ item.relativeUrl) }}">
+                                            {{ item.text|raw }}
+                                        </a>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </nav>
 
                 {% endif %}
