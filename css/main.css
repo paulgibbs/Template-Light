@@ -51,6 +51,9 @@ li {
     font-weight: 300;
     margin-left: 10px;
 }
+.navbar-brand img {
+    display: inline-block;
+}
 
 @media (min-width: 768px) {
     #sidebar {
