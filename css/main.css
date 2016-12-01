@@ -56,7 +56,7 @@ li {
 }
 
 @media (max-width: 415px) {
-    .navbar-brand small {
+    header .navbar-brand small {
         display: block;
         margin-left: 0;
     }
