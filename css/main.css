@@ -55,12 +55,20 @@ li {
     display: inline-block;
 }
 
+@media (max-width: 415px) {
+    .navbar-brand small {
+        display: block;
+        margin-left: 0;
+    }
+}
+
 @media (min-width: 768px) {
     #sidebar {
         position:fixed;
         margin-top: 30px;
     }
 }
+
 @media (max-width: 960px) {
     body {
         font-size: 17px;
