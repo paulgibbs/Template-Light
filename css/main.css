@@ -106,6 +106,11 @@ li {
     margin-top: 0;
 }
 
+#sidebar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
 #sidebar .text-muted {
     color: #bbbbbb;
 }
