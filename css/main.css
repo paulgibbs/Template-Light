@@ -93,7 +93,7 @@ li {
     }
 
     .sidebar-nav .navbar-nav > li  > a {
-        line-height: unset;
+        line-height: 1.6;
     }
 }
 
