@@ -7,12 +7,6 @@ body {
     font-size: 19px;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        width: 970px;
-    }
-}
-
 main {
     margin-top: 15px;
 }
@@ -111,6 +105,12 @@ li {
     }
 }
 
+@media (min-width: 1200px) {
+    .container {
+        width: 970px;
+    }
+}
+
 .page-header {
     margin-top: 0;
 }
@@ -163,6 +163,7 @@ h6, .h6 {
     margin: 0;
     padding: 0;
 }
+
 
 /* more hacks because. */
 
