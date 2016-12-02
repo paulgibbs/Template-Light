@@ -2,6 +2,7 @@ html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     font-size: 19px;
 }
@@ -25,6 +26,7 @@ footer {
     text-transform: uppercase;
     margin-top: 15px;
 }
+
 footer p {
     margin: 0;
 }
@@ -46,11 +48,13 @@ li {
     height: auto;
     line-height: 40px;
 }
+
 .navbar .navbar-brand small {
     font-size: 18px;
     font-weight: 300;
     margin-left: 10px;
 }
+
 .navbar-brand img {
     display: inline-block;
 }
@@ -68,7 +72,7 @@ li {
         margin-top: 30px;
     }
 
-    /* make sidebar nav vertical */ 
+    /* hacks to make sidebar nav vertical. */ 
     .sidebar-nav .navbar .navbar-collapse {
         padding: 0;
         max-height: none;
@@ -101,6 +105,7 @@ li {
     body {
         font-size: 17px;
     }
+
     pre {
         font-size: 12px;
     }
@@ -124,6 +129,7 @@ pre {
     border-radius: 4px;
     font-size: 15px;
 }
+
 pre code {
     border: none;
 }
@@ -150,4 +156,18 @@ h5, .h5 {
 
 h6, .h6 {
     font-size: 14px;
+}
+
+
+/* more hacks because. */
+
+.navbar-default .navbar-nav > li > a {
+    color: #2196f3 !important;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    background-color: #2196f3 !important;
+    color: #ffffff !important;
 }
