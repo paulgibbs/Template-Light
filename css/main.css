@@ -95,6 +95,15 @@ li {
     }
 }
 
+@media (max-width: 768px) {
+    .navbar-header {
+        float: right;
+    }
+    .navbar-collapse {
+        width: 85%;
+    }
+}
+
 @media (max-width: 960px) {
     body {
         font-size: 17px;
