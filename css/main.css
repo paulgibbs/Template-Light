@@ -29,6 +29,10 @@ li {
     margin-bottom: 3px;
 }
 
+#content {
+    margin-bottom: 15px;
+}
+
 #content img {
     max-width: 100%;
     padding: 4px;
