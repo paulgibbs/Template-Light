@@ -95,13 +95,15 @@
             </div>
         </main>
 
-        <footer>
-            <div class="{{ menu ? 'container-fluid' : 'container' }}">
-                <p class="text-muted">
-                    {{ footerTitle|raw }}
-                </p>
-            </div>
-        </footer>
+        {% if footerTitle is defined %}
+            <footer>
+                <div class="{{ menu ? 'container-fluid' : 'container' }}">
+                    <p class="text-muted">
+                        {{ footerTitle|raw }}
+                    </p>
+                </div>
+            </footer>
+        {% endif %}
 
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
