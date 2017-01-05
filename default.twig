@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {% if menu is defined %}
-        one
             {% for itemId, item in menu.items %}
-            two
+            {{ currentMenu }} -- {{ itemId }}
                 {% if itemId == currentMenu or item.items is defined and currentMenu in item.items|keys %}
                 three
                     <title>{{ item.text|raw }}</title>
