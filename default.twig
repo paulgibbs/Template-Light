@@ -4,7 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{{ title }}</title>
+        {% if menu is defined %}
+            {% for itemId, item in menu.items %}
+                {% if itemId == currentMenu or (item.items is defined and currentMenu in item.items|keys) %}
+                    <title>{{ item.text|raw }}</title>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
 
         <link rel="stylesheet" href="{{ baseUrl }}/css/bootstrap.min.css">
         <link rel="stylesheet" href="{{ baseUrl }}/css/font-awesome.min.css">
