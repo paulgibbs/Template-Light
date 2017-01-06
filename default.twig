@@ -6,9 +6,7 @@
 
         {% if menu is defined %}
             {% for itemId, item in menu.items %}
-            {{ currentMenu }} -- {{ itemId }}
                 {% if itemId == currentMenu or item.items is defined and currentMenu in item.items|keys %}
-                three
                     <title>{{ item.text|raw }}</title>
                 {% endif %}
             {% endfor %}
