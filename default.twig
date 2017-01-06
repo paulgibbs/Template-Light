@@ -5,11 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {% if menu is defined %}
-            {% if currentMenu in menu.items|keys or item.items is defined and currentMenu in item.items|keys %}
-                <title>{{ item.text|raw }}</title>
-            {% else %}
-                <title>{{ title ~ ' -- ' ~ subTitle }}</title>
-            {% endif %}
+            {% for itemId, item in menu.items %}
+                {% if itemId == currentMenu or item.items is defined and currentMenu in item.items|keys %}
+                    <title>{{ item.text|raw }} -- {{ title }}</title>
+                {% endif %}
+            {% endfor %}
         {% endif %}
 
         <link rel="stylesheet" href="{{ baseUrl }}/css/bootstrap.min.css">
