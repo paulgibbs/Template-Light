@@ -17,6 +17,37 @@
         <link rel="stylesheet" href="{{ baseUrl }}/css/highlight.dark.css">
         <link rel="stylesheet" href="{{ baseUrl }}/css/main.css">
         <meta name="description" content="{{ metadescription|default(title ~ ' -- ' ~ subTitle) }}"/>
+
+        <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+        <script>
+            (function($) {
+                $(document).ready(function() {
+                    hljs.initHighlightingOnLoad();
+
+                    $("section>h1").wrap('<div class="page-header" />');
+                    $('table').map(function() {
+                        var table = $(this);
+                        table.addClass('table table-striped');
+                        table.wrap(function() {
+                            return '<div class="table-responsive"></div>';
+                        });
+                    });
+                });
+            })(jQuery);
+
+            {% if googleAnalyticsCode is defined %}
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+                ga('create', '{{ googleAnalyticsCode }}', 'auto');
+                ga('send', 'pageview');
+            {% endif %}
+        </script>
     </head>
     <body>
 
@@ -111,37 +142,6 @@
                 </div>
             </footer>
         {% endif %}
-
-        <script async src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
-
-        <script>
-            (function($) {
-                $(document).ready(function() {
-                    hljs.initHighlightingOnLoad();
-
-                    $("section>h1").wrap('<div class="page-header" />');
-                    $('table').map(function() {
-                        var table = $(this);
-                        table.addClass('table table-striped');
-                        table.wrap(function() {
-                            return '<div class="table-responsive"></div>';
-                        });
-                    });
-                });
-            })(jQuery);
-
-            {% if googleAnalyticsCode is defined %}
-                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-                ga('create', '{{ googleAnalyticsCode }}', 'auto');
-                ga('send', 'pageview');
-            {% endif %}
-        </script>
 
     </body>
 </html>
