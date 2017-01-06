@@ -8,7 +8,7 @@
             {% if currentMenu in menu.items|keys or item.items is defined and currentMenu in item.items|keys %}
                 <title>{{ item.text|raw }}</title>
             {% else %}
-                <title>{{ title ~ ' -- ' ~ subtitle }}</title>
+                <title>{{ title ~ ' -- ' ~ subTitle }}</title>
             {% endif %}
         {% endif %}
 
@@ -16,7 +16,7 @@
         <link rel="stylesheet" href="{{ baseUrl }}/css/font-awesome.min.css">
         <link rel="stylesheet" href="{{ baseUrl }}/css/highlight.dark.css">
         <link rel="stylesheet" href="{{ baseUrl }}/css/main.css">
-        <meta name="description" content="{{ metadescription|default(title ~ ' -- ' ~ subtitle) }}"/>
+        <meta name="description" content="{{ metadescription|default(title ~ ' -- ' ~ subTitle) }}"/>
     </head>
     <body>
 
